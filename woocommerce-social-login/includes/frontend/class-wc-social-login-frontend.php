@@ -18,7 +18,7 @@
  *
  * @package     WC-Social-Login/Classes
  * @author      SkyVerge
- * @copyright   Copyright (c) 2014-2017, SkyVerge, Inc.
+ * @copyright   Copyright (c) 2014-2018, SkyVerge, Inc.
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
@@ -54,11 +54,7 @@ class WC_Social_Login_Frontend {
 		add_action( 'woocommerce_before_template_part', array( $this, 'maybe_render_social_buttons' ) );
 
 		// render social login profile on my account page
-		if ( SV_WC_Plugin_Compatibility::is_wc_version_gte_2_6() ) {
-			add_action( 'woocommerce_after_edit_account_form', array( $this, 'render_social_login_profile' ) );
-		} else {
-			add_action( 'woocommerce_before_my_account', array( $this, 'render_social_login_profile' ) );
-		}
+		add_action( 'woocommerce_after_edit_account_form', array( $this, 'render_social_login_profile' ) );
 
 		// inject social login buttons to "Have an account? Login..." notice at checkout
 		add_filter( 'woocommerce_add_notice', array( $this, 'checkout_social_login_message' ) );

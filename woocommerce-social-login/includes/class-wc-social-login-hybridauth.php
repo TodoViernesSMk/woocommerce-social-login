@@ -18,7 +18,7 @@
  *
  * @package     WC-Social-Login/Includes
  * @author      SkyVerge
- * @copyright   Copyright (c) 2014-2017, SkyVerge, Inc.
+ * @copyright   Copyright (c) 2014-2018, SkyVerge, Inc.
  * @license     http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
@@ -165,6 +165,12 @@ class WC_Social_Login_HybridAuth {
 
 		}
 
+		// extra level of security for hosts that may leak HybridAuth sessions to other visitors >:(
+		// see https://github.com/skyverge/wc-plugins/issues/2481
+		if ( ! empty( $hybridauth ) && is_callable( array( $hybridauth, 'logoutAllProviders' ) ) ) {
+			$hybridauth->logoutAllProviders();
+		}
+
 		$this->redirect( $user_id );
 	}
 
@@ -249,7 +255,7 @@ class WC_Social_Login_HybridAuth {
 
 		$user       = get_user_by( 'id', $user_id );
 		$return_url = get_transient( 'wcsl_' . md5( $_SERVER['REMOTE_ADDR'] . $_SERVER['HTTP_USER_AGENT'] ) );
-		$return_url = $return_url ? esc_url( urldecode( $return_url ) ) : wc_get_page_permalink( 'myaccount' );
+		$return_url = $return_url ? urldecode( $return_url ) : wc_get_page_permalink( 'myaccount' );
 
 		// if the provider did not provide an email and user does not have an email, display a notice and
 		// redirect to my account page, unless user was on checkout page where they are asked for an email

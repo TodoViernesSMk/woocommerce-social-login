@@ -1,10 +1,8 @@
 === WooCommerce Social Login ===
 Author: skyverge, woocommerce
 Tags: woocommerce
-Requires at least: 4.1
-Tested up to: 4.8
-WC requires at least: 2.5.5
-WC tested up to: 3.1.2
+Requires at least: 4.4
+Tested up to: 4.9.2
 
 One-click registration and login via social networks like Facebook, Google, Twitter and Amazon
 

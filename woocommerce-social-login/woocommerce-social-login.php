@@ -5,20 +5,22 @@
  * Description: One-click registration and login via social networks like Facebook, Google, Twitter and Amazon
  * Author: SkyVerge
  * Author URI: http://www.woocommerce.com
- * Version: 2.3.2
+ * Version: 2.4.0
  * Text Domain: woocommerce-social-login
  * Domain Path: /i18n/languages/
- * Copyright: (c) 2014-2017, SkyVerge, Inc. (info@skyverge.com)
+ * Copyright: (c) 2014-2018, SkyVerge, Inc. (info@skyverge.com)
  * License: GNU General Public License v3.0
  * License URI: http://www.gnu.org/licenses/gpl-3.0.html
  *
  * @package   WC-Social-Login
  * @author    SkyVerge
  * @category  Integration
- * @copyright Copyright (c) 2014-2017, SkyVerge, Inc.
+ * @copyright Copyright (c) 2014-2018, SkyVerge, Inc.
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  *
  * Woo: 473617:b231cd6367a79cc8a53b7d992d77525d
+ * WC requires at least: 2.6.14
+ * WC tested up to: 3.3.0
  */
 
 defined( 'ABSPATH' ) or exit;
@@ -41,9 +43,9 @@ if ( ! class_exists( 'SV_WC_Framework_Bootstrap' ) ) {
 	require_once( plugin_dir_path( __FILE__ ) . 'lib/skyverge/woocommerce/class-sv-wc-framework-bootstrap.php' );
 }
 
-SV_WC_Framework_Bootstrap::instance()->register_plugin( '4.6.4', __( 'WooCommerce Social Login', 'woocommerce-social-login' ), __FILE__, 'init_woocommerce_social_login', array(
-	'minimum_wc_version'   => '2.5.5',
-	'minimum_wp_version'   => '4.1',
+SV_WC_Framework_Bootstrap::instance()->register_plugin( '4.9.0', __( 'WooCommerce Social Login', 'woocommerce-social-login' ), __FILE__, 'init_woocommerce_social_login', array(
+	'minimum_wc_version'   => '2.6.14',
+	'minimum_wp_version'   => '4.4',
 	'backwards_compatible' => '4.4',
 ) );
 
@@ -113,7 +115,7 @@ class WC_Social_Login extends SV_WC_Plugin {
 
 
 	/** plugin version number */
-	const VERSION = '2.3.2';
+	const VERSION = '2.4.0';
 
 	/** @var WC_Social_Login single instance of this plugin */
 	protected static $instance;

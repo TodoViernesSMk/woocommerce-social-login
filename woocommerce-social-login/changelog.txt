@@ -1,5 +1,15 @@
 *** WooCommerce Social Login Changelog ***
 
+2018.01.23 - version 2.4.0
+ * Misc - Add support for WooCommerce 3.3
+ * Misc - Remove support for WooCommerce 2.5
+
+2018.01.10 - version 2.3.4
+ * Tweak - Clear HybridAuth session once user is logged in to add another layer of security on hosts with misconfigured session caching
+
+2017.11.15 - version 2.3.3
+ * Fix - Ensure ampersands in return URLs are not incorrectly escaped before redirecting to the return URL
+
 2017.09.06 - version 2.3.2
  * Misc - Added support for WooCommerce One Page Checkout plugin
 

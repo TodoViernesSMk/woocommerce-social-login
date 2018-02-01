@@ -18,7 +18,7 @@
  *
  * @package   WC-Social-Login/Templates
  * @author    SkyVerge
- * @copyright Copyright (c) 2014-2017, SkyVerge, Inc.
+ * @copyright Copyright (c) 2014-2018, SkyVerge, Inc.
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
@@ -29,7 +29,7 @@
  * @param string $available_providers All available social login providers
  * @param string $return_url
  *
- * @version 1.8.0
+ * @version 2.4.0
  * @since 1.1.0
  */
 ?>
@@ -113,7 +113,7 @@
 
 		<p><?php esc_html_e( 'You can link your account to the following providers:', 'woocommerce-social-login' ); ?></p>
 
-		<?php woocommerce_social_login_link_account_buttons( SV_WC_Plugin_Compatibility::is_wc_version_gte_2_6() ? wc_customer_edit_account_url() : null ); ?>
+		<?php woocommerce_social_login_link_account_buttons( wc_customer_edit_account_url() ); ?>
 
 	</div>
 

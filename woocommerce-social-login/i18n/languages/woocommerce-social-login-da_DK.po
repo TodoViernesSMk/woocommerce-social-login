@@ -132,7 +132,7 @@ msgid ""
 msgstr "Denne indstilling styre hvilken tekst kunderne skal se"
 
 #: includes/admin/class-wc-social-login-settings.php:126
-#: woocommerce-social-login.php:852
+#: woocommerce-social-login.php:854
 msgid "For faster checkout, login or register using your social account."
 msgstr "For hurtigere logind, oprettelse, og generelt brug din social konto "
 
@@ -149,7 +149,7 @@ msgid ""
 msgstr "Denne indstilling styre hvilken tekst kunderne skal se"
 
 #: includes/admin/class-wc-social-login-settings.php:135
-#: woocommerce-social-login.php:853 woocommerce-social-login.php:976
+#: woocommerce-social-login.php:855 woocommerce-social-login.php:978
 msgid "Use a social account for faster login or easy registration."
 msgstr ""
 
@@ -219,41 +219,41 @@ msgid "linked accounts"
 msgstr "Linked kontoer"
 
 #: includes/class-wc-social-login-hybridauth.php:138
-#: includes/frontend/class-wc-social-login-frontend.php:85
+#: includes/frontend/class-wc-social-login-frontend.php:81
 msgid "Provider Authentication error"
 msgstr "Udbyder godkendelses fejl"
 
-#: includes/class-wc-social-login-hybridauth.php:262
+#: includes/class-wc-social-login-hybridauth.php:268
 msgid "Please enter your email address to complete your registration"
 msgstr "Indtast din e-mail for at godkende registeringen "
 
 #. translators: %s - a URL
-#: includes/class-wc-social-login-hybridauth.php:265
+#: includes/class-wc-social-login-hybridauth.php:271
 #, fuzzy
 msgid ""
 "Please enter your email address to complete your registration and continue "
 "to %s"
 msgstr "Indtast din e-mail for at godkende registeringen "
 
-#: includes/class-wc-social-login-hybridauth.php:326
+#: includes/class-wc-social-login-hybridauth.php:332
 msgid "No provider class found for %s"
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:335
+#: includes/class-wc-social-login-hybridauth.php:341
 msgid "%s returned an invalid user identifier."
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:387
+#: includes/class-wc-social-login-hybridauth.php:393
 msgid ""
 "Oops, it looks like you may already have an account&hellip; please log in to "
 "link your profile."
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:505
+#: includes/class-wc-social-login-hybridauth.php:511
 msgid "ERROR"
 msgstr "FEJL"
 
-#: includes/class-wc-social-login-hybridauth.php:505
+#: includes/class-wc-social-login-hybridauth.php:511
 msgid ""
 "Couldn&#8217;t register you&hellip; please contact us if you continue to "
 "have problems."
@@ -261,7 +261,7 @@ msgstr ""
 "Kunne ikke oprette dig, venligst prøv igen. Hvis fejlen forsætter kontakt os "
 "da."
 
-#: includes/frontend/class-wc-social-login-frontend.php:228
+#: includes/frontend/class-wc-social-login-frontend.php:224
 msgid ""
 "Save time next time you checkout by linking your account to your favorite "
 "social network. No need to remember another username and password."
@@ -269,7 +269,7 @@ msgstr ""
 "Spar tid, ved at linke din konto til dit favorit social netværk. Du slipper "
 "for at skulle huske, brugernavn og adgangskode"
 
-#: includes/frontend/class-wc-social-login-frontend.php:299
+#: includes/frontend/class-wc-social-login-frontend.php:295
 msgid "Click here to login"
 msgstr "Tryk her for at logge ind"
 
@@ -895,7 +895,7 @@ msgstr "Du kan forbinde til følgende udbyder"
 
 #. translators: Placeholders: %1$s - opening HTML <a> tag, %2$s - closing HTML
 #. </a> tag
-#: woocommerce-social-login.php:570
+#: woocommerce-social-login.php:572
 #, fuzzy
 msgid ""
 "Thanks for installing Social Login! Before you get started, please take a "
@@ -904,7 +904,7 @@ msgstr ""
 "Tak fordi du installeret Social Logind! Før du starter venligst læst %svores "
 "dokumentation%s"
 
-#: woocommerce-social-login.php:627
+#: woocommerce-social-login.php:629
 msgid ""
 "Oops, looks like iThemes Security is set to Filter Long URLs. This is likely "
 "to cause a conflict with Social Login -- please disable that setting for "
@@ -912,7 +912,7 @@ msgid ""
 msgstr ""
 
 #. translators: %1$s, %3$s - opening <a> tag, %2$s, %4$s - closing </a> tag
-#: woocommerce-social-login.php:639
+#: woocommerce-social-login.php:641
 msgid ""
 "Please update callback URLs for each Social Login provider, then switch "
 "callback URLs to the Default format in the %1$sSocial Login settings%2$s. "
@@ -955,7 +955,7 @@ msgctxt "noun"
 msgid "Link Button Text"
 msgstr "Link knap tekst"
 
-#: woocommerce-social-login.php:601
+#: woocommerce-social-login.php:603
 msgctxt "Requires SSL"
 msgid ""
 "WooCommerce Social Login: %s requires SSL for authentication, please force "

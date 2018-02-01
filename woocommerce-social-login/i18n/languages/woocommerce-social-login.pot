@@ -1,15 +1,15 @@
-# Copyright (C) 2017 SkyVerge
+# Copyright (C) 2018 SkyVerge
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Social Login 2.3.2\n"
+"Project-Id-Version: WooCommerce Social Login 2.4.0\n"
 "Report-Msgid-Bugs-To: "
 "https://woocommerce.com/my-account/marketplace-ticket-form/\n"
 "POT-Creation-Date: 2014-08-23 20:36:33+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2018-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
@@ -122,7 +122,7 @@ msgid ""
 msgstr ""
 
 #: includes/admin/class-wc-social-login-settings.php:126
-#: woocommerce-social-login.php:852
+#: woocommerce-social-login.php:854
 msgid "For faster checkout, login or register using your social account."
 msgstr ""
 
@@ -137,7 +137,7 @@ msgid ""
 msgstr ""
 
 #: includes/admin/class-wc-social-login-settings.php:135
-#: woocommerce-social-login.php:853 woocommerce-social-login.php:976
+#: woocommerce-social-login.php:855 woocommerce-social-login.php:978
 msgid "Use a social account for faster login or easy registration."
 msgstr ""
 
@@ -207,52 +207,52 @@ msgid "linked accounts"
 msgstr ""
 
 #: includes/class-wc-social-login-hybridauth.php:138
-#: includes/frontend/class-wc-social-login-frontend.php:85
+#: includes/frontend/class-wc-social-login-frontend.php:81
 msgid "Provider Authentication error"
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:262
+#: includes/class-wc-social-login-hybridauth.php:268
 msgid "Please enter your email address to complete your registration"
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:265
+#: includes/class-wc-social-login-hybridauth.php:271
 #. translators: %s - a URL
 msgid ""
 "Please enter your email address to complete your registration and continue "
 "to %s"
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:326
+#: includes/class-wc-social-login-hybridauth.php:332
 msgid "No provider class found for %s"
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:335
+#: includes/class-wc-social-login-hybridauth.php:341
 msgid "%s returned an invalid user identifier."
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:387
+#: includes/class-wc-social-login-hybridauth.php:393
 msgid ""
 "Oops, it looks like you may already have an account&hellip; please log in "
 "to link your profile."
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:505
+#: includes/class-wc-social-login-hybridauth.php:511
 msgid "ERROR"
 msgstr ""
 
-#: includes/class-wc-social-login-hybridauth.php:505
+#: includes/class-wc-social-login-hybridauth.php:511
 msgid ""
 "Couldn&#8217;t register you&hellip; please contact us if you continue to "
 "have problems."
 msgstr ""
 
-#: includes/frontend/class-wc-social-login-frontend.php:228
+#: includes/frontend/class-wc-social-login-frontend.php:224
 msgid ""
 "Save time next time you checkout by linking your account to your favorite "
 "social network. No need to remember another username and password."
 msgstr ""
 
-#: includes/frontend/class-wc-social-login-frontend.php:299
+#: includes/frontend/class-wc-social-login-frontend.php:295
 msgid "Click here to login"
 msgstr ""
 
@@ -817,7 +817,7 @@ msgstr ""
 msgid "You can link your account to the following providers:"
 msgstr ""
 
-#: woocommerce-social-login.php:570
+#: woocommerce-social-login.php:572
 #. translators: Placeholders: %1$s - opening HTML <a> tag, %2$s - closing HTML
 #. </a> tag
 msgid ""
@@ -825,14 +825,14 @@ msgid ""
 "moment to %1$sread through the documentation%2$s."
 msgstr ""
 
-#: woocommerce-social-login.php:627
+#: woocommerce-social-login.php:629
 msgid ""
 "Oops, looks like iThemes Security is set to Filter Long URLs. This is "
 "likely to cause a conflict with Social Login -- please disable that setting "
 "for optimal functionality."
 msgstr ""
 
-#: woocommerce-social-login.php:639
+#: woocommerce-social-login.php:641
 #. translators: %1$s, %3$s - opening <a> tag, %2$s, %4$s - closing </a> tag
 msgid ""
 "Please update callback URLs for each Social Login provider, then switch "
@@ -871,7 +871,7 @@ msgctxt "noun"
 msgid "Link Button Text"
 msgstr ""
 
-#: woocommerce-social-login.php:601
+#: woocommerce-social-login.php:603
 msgctxt "Requires SSL"
 msgid ""
 "WooCommerce Social Login: %s requires SSL for authentication, please force "
