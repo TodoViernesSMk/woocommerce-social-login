@@ -5,7 +5,7 @@
  * Description: One-click registration and login via social networks like Facebook, Google, Twitter and Amazon
  * Author: SkyVerge
  * Author URI: http://www.woocommerce.com
- * Version: 2.4.0
+ * Version: 2.4.1
  * Text Domain: woocommerce-social-login
  * Domain Path: /i18n/languages/
  * Copyright: (c) 2014-2018, SkyVerge, Inc. (info@skyverge.com)
@@ -115,7 +115,7 @@ class WC_Social_Login extends SV_WC_Plugin {
 
 
 	/** plugin version number */
-	const VERSION = '2.4.0';
+	const VERSION = '2.4.1';
 
 	/** @var WC_Social_Login single instance of this plugin */
 	protected static $instance;
@@ -579,6 +579,25 @@ class WC_Social_Login extends SV_WC_Plugin {
 		}
 
 		$this->add_ssl_admin_notices();
+
+		// display a notice specifically for Facebook Redirect URIs
+		if ( $facebook = $this->get_provider( 'facebook' ) ) {
+
+			if ( $facebook->is_enabled() && ! $facebook->is_redirect_uri_configured() ) {
+
+				$message = sprintf(
+					/* translators: Placeholders: %1$s - <a> tag, %2$s - </a> tag, %3$s - <a> tag, %4$s - </a> tag */
+					__( 'WooCommerce Social Login: Facebook now requires your site\'s full OAuth Redirect URI to be configured for your app. Please head over to the %1$sFacebook settings%2$s to get your Redirect URI, and read more about %3$sconfiguring your app &raquo;%4$s', 'woocommerce-social-login' ),
+					'<a href="' . esc_url( add_query_arg( 'section', strtolower( get_class( $facebook ) ), $this->get_settings_url() ) ) . '">', '</a>',
+					'<a href="' . esc_url( 'https://docs.woocommerce.com/document/woocommerce-social-login-create-social-apps/#section-1' ) . '">', '</a>'
+				);
+
+				$this->get_admin_notice_handler()->add_admin_notice( $message, $facebook->get_id() . '-redirect-uri-not-configured', array(
+					'notice_class' => 'notice-warning',
+					'dismissible'  => false,
+				) );
+			}
+		}
 	}
 
 

@@ -592,7 +592,16 @@ abstract class WC_Social_Login_Provider extends WC_Settings_API {
 
 		$auth_path   = wc_social_login()->get_auth_path();
 		$provider_id = esc_attr( $this->get_id() );
-		$force_ssl   = $this->requires_ssl() || 'yes' === get_option( 'wc_social_login_force_ssl_callback_url', 'no' ) || ( apply_filters( 'wc_social_login_force_ssl_callback', false, $this ) );
+
+		/**
+		 * Filters whether SSL should be forced for this provider's callback.
+		 *
+		 * @since 2.0.0
+		 *
+		 * @param bool $force_ssl whether SSL should be forced for this provider's callback
+		 * @param \WC_Social_Login_Provider $provider provider instance
+		 */
+		$force_ssl = $this->requires_ssl() || 'yes' === get_option( 'wc_social_login_force_ssl_callback_url', 'no' ) || ( apply_filters( 'wc_social_login_force_ssl_callback', false, $this ) );
 
 		// TODO: remove legacy callback url format support when removing backwards compatibility
 		// with OpAuth-style callbacks {IT 2016-10-12}
@@ -620,6 +629,21 @@ abstract class WC_Social_Login_Provider extends WC_Settings_API {
 	 * @return array
 	 */
 	abstract public function get_hybridauth_config();
+
+
+	/**
+	 * Determines if the user has confirmed redirect URI config.
+	 *
+	 * Assumes true for most providers that do not have a setting to confirm this.
+	 *
+	 * @since 2.4.1
+	 *
+	 * @return bool
+	 */
+	public function is_redirect_uri_configured() {
+
+		return true;
+	}
 
 
 }

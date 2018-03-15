@@ -1,5 +1,8 @@
 *** WooCommerce Social Login Changelog ***
 
+2018.02.28 - version 2.4.1
+ * Tweak - Add a setting and admin notice for Facebook's upcoming Redirect URI requirements
+
 2018.01.23 - version 2.4.0
  * Misc - Add support for WooCommerce 3.3
  * Misc - Remove support for WooCommerce 2.5

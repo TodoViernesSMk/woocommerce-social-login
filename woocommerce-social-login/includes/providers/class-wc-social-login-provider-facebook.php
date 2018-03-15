@@ -60,8 +60,14 @@ class WC_Social_Login_Provider_Facebook extends WC_Social_Login_Provider {
 	 * @return string
 	 */
 	public function get_description() {
+
 		/* translators: Placeholders: %1$s - opening HTML <a> tag, %2$s - closing HTML </a> tag */
-		return sprintf( __( 'Need help setting up and configuring Facebook? %1$sRead the docs%2$s', 'woocommerce-social-login' ), '<a href="http://docs.woocommerce.com/document/woocommerce-social-login-create-social-apps#facebook">', '</a>' );
+		$description = sprintf( __( 'Need help setting up and configuring Facebook? %1$sRead the docs%2$s', 'woocommerce-social-login' ), '<a href="http://docs.woocommerce.com/document/woocommerce-social-login-create-social-apps#facebook">', '</a>' );
+
+		/* translators: Placeholder: %s - a url */
+		$description .= '<br/><br/>' . sprintf( __( 'The redirect URI is %s', 'woocommerce-social-login' ), '<code>' . $this->get_callback_url( 'admin' ) . '</code>' );
+
+		return $description;
 	}
 
 
@@ -107,6 +113,22 @@ class WC_Social_Login_Provider_Facebook extends WC_Social_Login_Provider {
 
 		$this->form_fields['id']['title']     = __( 'App ID', 'woocommerce-social-login' );
 		$this->form_fields['secret']['title'] = __( 'App Secret', 'woocommerce-social-login' );
+
+		$this->form_fields['redirect_uri_configured'] = array(
+			'title'   => __( 'Redirect URI', 'woocommerce-social-login' ),
+			'type'    => 'checkbox',
+			'default' => 'no',
+			'label'   => sprintf(
+				/* translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag */
+				__( 'I certify that I have added this site to my app\'s list of %1$sValid OAuth redirect URIs%2$s', 'woocommerce-social-login' ),
+				'<strong>', '</strong>'
+			),
+			'description' => sprintf(
+				/* translators: Placeholders: %s - OAuth redirect URI, wrapped in <code> tags */
+				__( 'Your redirect URI is %s', 'woocommerce-social-login' ),
+				'<code>' . esc_url( $this->get_callback_url( 'admin' ) ) . '</code>'
+			),
+		);
 	}
 
 
@@ -131,6 +153,19 @@ class WC_Social_Login_Provider_Facebook extends WC_Social_Login_Provider {
 	 */
 	public function get_default_link_button_text() {
 		return __( 'Link your account to Facebook', 'woocommerce-social-login' );
+	}
+
+
+	/**
+	 * Determines if the user has confirmed redirect URI config.
+	 *
+	 * @since 2.4.1
+	 *
+	 * @return bool
+	 */
+	public function is_redirect_uri_configured() {
+
+		return 'yes' === $this->get_option( 'redirect_uri_configured' );
 	}
 
 

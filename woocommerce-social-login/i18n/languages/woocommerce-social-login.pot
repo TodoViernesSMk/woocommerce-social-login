@@ -2,7 +2,7 @@
 # This file is distributed under the GNU General Public License v3.0.
 msgid ""
 msgstr ""
-"Project-Id-Version: WooCommerce Social Login 2.4.0\n"
+"Project-Id-Version: WooCommerce Social Login 2.4.1\n"
 "Report-Msgid-Bugs-To: "
 "https://woocommerce.com/my-account/marketplace-ticket-form/\n"
 "POT-Creation-Date: 2014-08-23 20:36:33+00:00\n"
@@ -122,7 +122,7 @@ msgid ""
 msgstr ""
 
 #: includes/admin/class-wc-social-login-settings.php:126
-#: woocommerce-social-login.php:854
+#: woocommerce-social-login.php:873
 msgid "For faster checkout, login or register using your social account."
 msgstr ""
 
@@ -137,7 +137,7 @@ msgid ""
 msgstr ""
 
 #: includes/admin/class-wc-social-login-settings.php:135
-#: woocommerce-social-login.php:855 woocommerce-social-login.php:978
+#: woocommerce-social-login.php:874 woocommerce-social-login.php:997
 msgid "Use a social account for faster login or easy registration."
 msgstr ""
 
@@ -370,42 +370,63 @@ msgid "Facebook"
 msgstr ""
 
 #: includes/providers/class-wc-social-login-provider-facebook.php:49
-#: includes/providers/class-wc-social-login-provider-facebook.php:64
+#: includes/providers/class-wc-social-login-provider-facebook.php:65
 #. translators: Placeholders: %1$s - <a> tag, %2$s - </a> tag
 #. translators: Placeholders: %1$s - opening HTML <a> tag, %2$s - closing HTML
 #. </a> tag
 msgid "Need help setting up and configuring Facebook? %1$sRead the docs%2$s"
 msgstr ""
 
-#: includes/providers/class-wc-social-login-provider-facebook.php:108
+#: includes/providers/class-wc-social-login-provider-facebook.php:68
+#. translators: Placeholder: %s - a url
+msgid "The redirect URI is %s"
+msgstr ""
+
+#: includes/providers/class-wc-social-login-provider-facebook.php:114
 msgid "App ID"
 msgstr ""
 
-#: includes/providers/class-wc-social-login-provider-facebook.php:109
+#: includes/providers/class-wc-social-login-provider-facebook.php:115
 msgid "App Secret"
 msgstr ""
 
-#: includes/providers/class-wc-social-login-provider-facebook.php:121
+#: includes/providers/class-wc-social-login-provider-facebook.php:118
+msgid "Redirect URI"
+msgstr ""
+
+#: includes/providers/class-wc-social-login-provider-facebook.php:123
+#. translators: Placeholders: %1$s - <strong> tag, %2$s - </strong> tag
+msgid ""
+"I certify that I have added this site to my app's list of %1$sValid OAuth "
+"redirect URIs%2$s"
+msgstr ""
+
+#: includes/providers/class-wc-social-login-provider-facebook.php:128
+#. translators: Placeholders: %s - OAuth redirect URI, wrapped in <code> tags
+msgid "Your redirect URI is %s"
+msgstr ""
+
+#: includes/providers/class-wc-social-login-provider-facebook.php:143
 msgid "Log in with Facebook"
 msgstr ""
 
-#: includes/providers/class-wc-social-login-provider-facebook.php:133
+#: includes/providers/class-wc-social-login-provider-facebook.php:155
 msgid "Link your account to Facebook"
 msgstr ""
 
-#: includes/providers/class-wc-social-login-provider-facebook.php:145
+#: includes/providers/class-wc-social-login-provider-facebook.php:180
 msgid "Your Facebook account is now linked to your account."
 msgstr ""
 
-#: includes/providers/class-wc-social-login-provider-facebook.php:146
+#: includes/providers/class-wc-social-login-provider-facebook.php:181
 msgid "Facebook was successfully unlinked from your account."
 msgstr ""
 
-#: includes/providers/class-wc-social-login-provider-facebook.php:147
+#: includes/providers/class-wc-social-login-provider-facebook.php:182
 msgid "This Facebook account is already linked to another user account."
 msgstr ""
 
-#: includes/providers/class-wc-social-login-provider-facebook.php:148
+#: includes/providers/class-wc-social-login-provider-facebook.php:183
 msgid ""
 "A user account using the same email address as this Facebook account "
 "already exists."
@@ -825,14 +846,24 @@ msgid ""
 "moment to %1$sread through the documentation%2$s."
 msgstr ""
 
-#: woocommerce-social-login.php:629
+#: woocommerce-social-login.php:590
+#. translators: Placeholders: %1$s - <a> tag, %2$s - </a> tag, %3$s - <a> tag,
+#. %4$s - </a> tag
+msgid ""
+"WooCommerce Social Login: Facebook now requires your site's full OAuth "
+"Redirect URI to be configured for your app. Please head over to the "
+"%1$sFacebook settings%2$s to get your Redirect URI, and read more about "
+"%3$sconfiguring your app &raquo;%4$s"
+msgstr ""
+
+#: woocommerce-social-login.php:648
 msgid ""
 "Oops, looks like iThemes Security is set to Filter Long URLs. This is "
 "likely to cause a conflict with Social Login -- please disable that setting "
 "for optimal functionality."
 msgstr ""
 
-#: woocommerce-social-login.php:641
+#: woocommerce-social-login.php:660
 #. translators: %1$s, %3$s - opening <a> tag, %2$s, %4$s - closing </a> tag
 msgid ""
 "Please update callback URLs for each Social Login provider, then switch "
@@ -871,7 +902,7 @@ msgctxt "noun"
 msgid "Link Button Text"
 msgstr ""
 
-#: woocommerce-social-login.php:603
+#: woocommerce-social-login.php:622
 msgctxt "Requires SSL"
 msgid ""
 "WooCommerce Social Login: %s requires SSL for authentication, please force "
